@@ -16,14 +16,20 @@ namespace laboration4
         
         public void addTeam(string name)
         {
-            
-            _teamPoints[teamsAdded] = 0;
-            _teamNames[teamsAdded] = name;
+            if (name.Length > 12 || name.Length < 3)
+            { throw new ArgumentOutOfRangeException(); }
+            if (teamsAdded == 2)
+            { throw new Exception(); }
+
+            _teamPoints[teamsAdded] = 0;           
             for (int i = 0; i < _teamNames.Length; i++)
             {
-                
+                if(name == _teamNames[i])
+                {
+                    throw new ArgumentException();
+                }
             }
-
+            _teamNames[teamsAdded] = name;
             teamsAdded++;
             Console.Clear();
             //Console.WriteLine( _teamNames[teamsAdded] + ": " + _teamPoints[teamsAdded] );

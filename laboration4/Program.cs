@@ -11,15 +11,7 @@ namespace laboration4
         static void Main(string[] args)
         {
             Teams teams = new Teams();
-            int[] keys = { 1, 4, 3, 2, 5 };
-            string[] items = { "abc", "def", "ghi", "jkl", "mno" };
-            Array.Sort(items, keys);
-            for (int i = 0; i < keys.Length; i++)
-            {
-                Console.WriteLine(keys[i] + items[i]);
-            }
-
-            
+         
             try
             {
                 while (true)
@@ -35,20 +27,23 @@ namespace laboration4
                             {
                                 try
                                 {
+
                                     string userInput = userinput("Namn på laget?(3-12 bokstäver)");
-                                    if (userInput.Length <= 12 && userInput.Length >= 3)
-                                    {
-                                        teams.addTeam(userInput);
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        throw new ArgumentOutOfRangeException();
-                                    }
+                                    teams.addTeam(userInput);
+                                    Console.WriteLine("Lag registrerat");
+                                    break;
+
                                 }
-                                catch { Console.WriteLine("du skrev inte ett namn som är minst 3 bokstäver och högst 12 bokstäver långt"); }
+                                catch (ArgumentOutOfRangeException) { Console.WriteLine("du skrev inte ett namn som är minst 3 bokstäver och högst 12 bokstäver långt"); }
+                                catch (ArgumentException) { Console.WriteLine("Ett lag med det namnet finns redan!");
+                                break;
+                                }
+                                catch (Exception) { Console.WriteLine("Det finns redan maximalt antal lag i turneringen. Tyvärr!");
+                                break;
+                                }
+
                             }
-                            Console.WriteLine("Lag registrerat");
+                            
                             break;
                         case 2: //Se lagen och dess poäng
                             teams.showTeams();
