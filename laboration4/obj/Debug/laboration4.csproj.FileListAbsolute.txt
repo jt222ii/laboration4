@@ -1,0 +1,6 @@
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\bin\Debug\laboration4.exe.config
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\bin\Debug\laboration4.exe
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\bin\Debug\laboration4.pdb
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\obj\Debug\laboration4.csprojResolveAssemblyReference.cache
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\obj\Debug\laboration4.exe
+P:\Labbuppgifter\2-3-geometriska-figurer\laboration4\laboration4\obj\Debug\laboration4.pdb
