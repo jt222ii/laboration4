@@ -9,16 +9,15 @@ namespace laboration4
     
     class Teams
     {
-        
-        public string[] _teamNames = new string[10];
-        public int[] _teamPoints = new int[10];
+        public string[] _teamNames = new string[15];
+        public int[] _teamPoints = new int[15];
         public int teamsAdded = 0;
         
         public void addTeam(string name)
         {
             if (name.Length > 12 || name.Length < 3)
             { throw new ArgumentOutOfRangeException(); }
-            if (teamsAdded == 2)
+            if (teamsAdded == _teamNames.Length)
             { throw new Exception(); }
 
             _teamPoints[teamsAdded] = 0;           
@@ -31,7 +30,7 @@ namespace laboration4
             }
             _teamNames[teamsAdded] = name;
             teamsAdded++;
-            Console.Clear();
+            
             //Console.WriteLine( _teamNames[teamsAdded] + ": " + _teamPoints[teamsAdded] );
         }
 
@@ -52,13 +51,11 @@ namespace laboration4
                 
                 for (int i = 0; i < _teamNames.Length; i++)
                 {
-
                     if (_teamNames[i] != null)
                     {
                         Console.WriteLine("{2}. {1}: {0}", _teamPoints[i], _teamNames[i], nummer);
                         nummer += 1;
                     }
-
                 }
             }
             else
