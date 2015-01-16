@@ -36,29 +36,31 @@ namespace laboration4
 
         public void removeTeam(int chosenteam)
         {
-            
-            string[] tempArray = _teamNames.Where(w => w != _teamNames[chosenteam]).ToArray();
-            int[] tempPoints = _teamPoints.Where(w => w != _teamPoints[chosenteam]).ToArray();
-            int tempspot = 0;
+
+            int k = 0;
+            string[] newArray = new string[_teamNames.Length];
+            int[] newInt = new int[_teamNames.Length];
             for (int i = 0; i < _teamNames.Length-1; i++)
             {
-                if (tempArray[i] != null)
+                if (i == chosenteam)
                 {
-                    _teamNames[tempspot] = tempArray[i];
-                    _teamPoints[tempspot] = tempPoints[i];
-                    teamsAdded = teamsAdded - 1;
-                    tempspot += 1;
+                    k = 1;
                 }
-                else if(tempArray[i] == null && _teamNames[i] != null)
+                if (i !=_teamNames.Length-1)
                 {
-                    _teamNames[i] = null;
-                    _teamPoints[tempspot] = 0;
-                    teamsAdded = teamsAdded - 1;
-                    tempspot += 1;
+                    newArray[i] = _teamNames[i + k];
+                    newInt[i] = _teamPoints[i + k]; 
                 }
-                else 
-                    tempspot += 1;
+                else if(i == _teamNames.Length-1)
+                {
+                    newArray[i] = null;
+                    newInt[i] = 0;
+                }
+
             }
+            teamsAdded = teamsAdded - 1;
+            Array.Copy(newArray, _teamNames, 15);
+            Array.Copy(newInt, _teamPoints, 15);
             
         }
         public void changeName(int chosenteam, string name)

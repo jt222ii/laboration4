@@ -11,7 +11,7 @@ namespace laboration4
         static void Main(string[] args)
         {
             Tests tests = new Tests();
-            tests.enhetstesteriteration1();
+            tests.test();
 
             Console.Clear();
             Teams teams = new Teams();

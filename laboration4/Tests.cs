@@ -8,7 +8,7 @@ namespace laboration4
 {
     class Tests
     {
-        public void enhetstesteriteration1()
+        public void test()
         {
             //test 1
             Console.WriteLine("test 1 - för få bokstäver");
@@ -66,23 +66,7 @@ namespace laboration4
                 Console.ResetColor();
 
             Console.ReadKey();
-        }
-        public void enhetstesteriteration2()
-        {
-
-        }        
-        public void integrationstesteriteration2()
-        {
-
-        }
-        public void enhetstesteriteration3()
-        {
-
-        }
-
-
-
-
+        }    
 
         public bool enhetstest1(string name)
         {
