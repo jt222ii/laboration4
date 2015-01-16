@@ -12,10 +12,10 @@ namespace laboration4
         {
             Tests tests = new Tests();
             tests.test();
-
+            Tests2 tests2 = new Tests2();
+            tests2.test();
             Console.Clear();
             Teams teams = new Teams();
-
             do
             {
                 try

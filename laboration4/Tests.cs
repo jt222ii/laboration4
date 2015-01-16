@@ -12,7 +12,7 @@ namespace laboration4
         {
             //test 1
             Console.WriteLine("test 1 - för få bokstäver");
-            if(enhetstest1("AB"))
+            if(test1("AB"))
             { 
                 Console.WriteLine("registreringen gick igenom med mindre än 3 bokstäver - testet misslyckades!");
             }
@@ -22,7 +22,7 @@ namespace laboration4
                 Console.ResetColor();
             //test 2
             Console.WriteLine("test 2 - för många bokstäver");
-            if (enhetstest1("ABCDEFGHIJKLMNOP"))
+            if (test1("ABCDEFGHIJKLMNOP"))
             {
                 Console.WriteLine("registreringen gick igenom med mer än 12 bokstäver - testet misslyckades!");
             }
@@ -33,8 +33,8 @@ namespace laboration4
 
             //test 3
             Console.WriteLine("test 3 - registrering med ett namn som redan finns");
-            enhetstest1("ABCDEFG");
-            if (enhetstestsamename("ABCDEFG", "ABCDEFG"))
+            test1("ABCDEFG");
+            if (samename("ABCDEFG", "ABCDEFG"))
             {
                 Console.WriteLine("registreringen gick igenom vid registrering av två lag med samma namn - testet misslyckades!");
             }
@@ -45,7 +45,7 @@ namespace laboration4
 
             //test 4
             Console.WriteLine("test 4 - Giltigt antal bokstäver");
-            if (enhetstest1("ABCDEFG"))
+            if (test1("ABCDEFG"))
             {
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 Console.WriteLine("registreringen gick igenom med giltigt antal bokstäver - testet lyckades!");
@@ -56,7 +56,7 @@ namespace laboration4
 
             //test 5
             Console.WriteLine("test 5 - av fler lag än det finns platser i tävlingen(Det finns 15 platser testar att skriva in 16 lag)");
-            if (enhetstesttoomanyteams("ABC"))
+            if (toomanyteams("ABC"))
             {
                 Console.WriteLine("Det gick att registrera mer lag än maximalt antal lag - testet misslyckades");
             }
@@ -68,7 +68,7 @@ namespace laboration4
             Console.ReadKey();
         }    
 
-        public bool enhetstest1(string name)
+        public bool test1(string name)
         {
             Teams teams = new Teams();
             try
@@ -81,7 +81,7 @@ namespace laboration4
                 return false;
             }
         }
-        public bool enhetstestsamename(string name, string name2)
+        public bool samename(string name, string name2)
         {          
             Teams teams = new Teams();
             try
@@ -96,7 +96,7 @@ namespace laboration4
             }
         }
 
-        public bool enhetstesttoomanyteams(string name)
+        public bool toomanyteams(string name)
         {
             Teams teams = new Teams();
             try
