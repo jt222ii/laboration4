@@ -16,3 +16,9 @@ C:\Users\Jonas\Desktop\Ny mapp (5)\laboration4\laboration4\obj\Debug\laboration4
 C:\Users\Jonas\Desktop\Ny mapp (5)\laboration4\laboration4\bin\Debug\laboration4.exe
 C:\Users\Jonas\Desktop\Ny mapp (5)\laboration4\laboration4\bin\Debug\laboration4.pdb
 C:\Users\Jonas\Desktop\Ny mapp (5)\laboration4\laboration4\obj\Debug\laboration4.csprojResolveAssemblyReference.cache
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\bin\Debug\laboration4.exe.config
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\obj\Debug\laboration4.exe
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\obj\Debug\laboration4.pdb
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\bin\Debug\laboration4.exe
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\bin\Debug\laboration4.pdb
+C:\Users\jt222ii\Desktop\New folder (3)\laboration4\laboration4\obj\Debug\laboration4.csprojResolveAssemblyReference.cache
