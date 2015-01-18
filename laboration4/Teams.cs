@@ -10,7 +10,7 @@ namespace laboration4
     class Teams
     {
         public string[] _teamNames = new string[15];
-        public int[] _teamPoints = new int[15];
+        public decimal[] _teamPoints = new decimal[15];
         public int teamsAdded = 0;
         
         public void addTeam(string name)
@@ -30,8 +30,6 @@ namespace laboration4
             }
             _teamNames[teamsAdded] = name;
             teamsAdded++;
-            
-            //Console.WriteLine( _teamNames[teamsAdded] + ": " + _teamPoints[teamsAdded] );
         }
 
         public void removeTeam(int chosenteam)
@@ -39,7 +37,7 @@ namespace laboration4
 
             int k = 0;
             string[] newArray = new string[_teamNames.Length];
-            int[] newInt = new int[_teamNames.Length];
+            decimal[] newInt = new decimal[_teamNames.Length];
             for (int i = 0; i < _teamNames.Length-1; i++)
             {
                 if (i == chosenteam)
@@ -85,7 +83,7 @@ namespace laboration4
             int nummer = 1;
             if (teamsAdded > 0)
             {
-                int[] points = new int[15];
+                decimal[] points = new decimal[15];
                 string[] names = new string[15];
                 Array.Copy(_teamNames, names, 15);
                 Array.Copy(_teamPoints, points, 15);
@@ -97,16 +95,21 @@ namespace laboration4
                 {
                     if (names[i] != null)
                     {
-                        Console.WriteLine("{2}. {1}: {0}", points[i], names[i], nummer);
+                        
+                        Console.WriteLine("\n{2}. {1}: {0:0.00}\n", points[i], names[i], nummer);
+                        
                         nummer += 1;
                     }
                 }
             }
             else
             {
-                Console.WriteLine("Det finns inga lag registrerade här");
-                Console.ReadKey();
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Det finns inga lag registrerade");
+                Console.ResetColor();
+
             }
+            Console.ReadKey();
         }
 
         public void showTeams()
@@ -125,9 +128,15 @@ namespace laboration4
             }
             else
             {
-                Console.WriteLine("Det finns inga lag registrerade här");
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Det finns inga lag registrerade");
+                Console.ResetColor();
                 Console.ReadKey();
             }
+        }
+        public void addPoints(int chosenteam, decimal points)
+        {
+          _teamPoints[chosenteam] += points;
         }
 
     }
