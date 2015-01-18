@@ -13,8 +13,12 @@ namespace laboration4
         {
             Tests tests = new Tests();
             tests.test();
+            Console.Clear();
             Tests2 tests2 = new Tests2();
             tests2.test();
+            Console.Clear();
+            Tests3 tests3 = new Tests3();
+            tests3.test();
             Console.Clear();
             Teams teams = new Teams();
             count countPoints = new count();
@@ -75,11 +79,14 @@ namespace laboration4
 
                                 break;
                             case 2: //Se lagen och dess poäng
+                                Console.Clear();
+                                Console.WriteLine("Poänglista\n---------------");
                                 teams.showLeaderboard(); 
                                 break;
                             case 3: //Ta bort/byta namn på lag
                                 //visa listan på lag
-
+                                Console.Clear();
+                                Console.WriteLine("Hantering\n---------------");
                                 teams.showTeams();
                                 int chosenteam = 0;
                                 if (teams.teamsAdded != 0)
@@ -140,6 +147,8 @@ namespace laboration4
                                 break;
 
                             case 4: //Välja lag och lägga till poängen till laget.
+                                Console.Clear();
+                                Console.WriteLine("Poängräkning\n---------------");
                                 int[] pointArray = new int[5];
                                 for (int i = 0; i < pointArray.Length; i++)
                                 {
